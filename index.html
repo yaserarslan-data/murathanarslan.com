@@ -3,26 +3,219 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Murathan Arslan | Gayrimenkul Danışmanı</title>
+
+  <meta name="description" content="Murathan Arslan - Kurtköy ve Yenişehir bölgesinde güvenilir gayrimenkul danışmanlığı." />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Murathan Arslan</h1>
-  <p>Gayrimenkul Danışmanı</p>
 
-  <a href="ilanlar.html">İlanları İncele</a>
-  <a href="hakkimda.html">Hakkımda</a>
-  <a href="https://wa.me/905322545592">WhatsApp</a>
+  <header class="header">
+    <nav class="nav">
+      <img src="assets/images/logo.png" alt="Murathan Arslan Logo" class="logo" />
 
-  <hr>
+      <div class="nav-links">
+        <a href="#" class="active">Ana Sayfa</a>
+        <a href="#sekmeler">İlanlar</a>
+        <a href="#sekmeler">İletişim</a>
+        <a href="#sekmeler">Galeri</a>
+      </div>
+    </nav>
+  </header>
 
-  <h2>Güvenilir Gayrimenkul Danışmanlığı</h2>
-  <p>
-    Kurtköy ve Yenişehir bölgesinde gayrimenkul alım-satım süreçlerinde
-    güven, şeffaflık ve doğru yönlendirme odaklı hizmet.
-  </p>
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="profile-wrap">
+          <img src="assets/images/Murathan.jpg" alt="Murathan Arslan" class="profile-img" />
+        </div>
 
-  <h2>İletişim</h2>
-  <p>Telefon: <a href="tel:+905322545592">+90 532 254 55 92</a></p>
-  <p>E-posta: <a href="mailto:murathan.arslan@gmail.com">murathan.arslan@gmail.com</a></p>
+        <div class="hero-content">
+          <div class="welcome">HOŞGELDİNİZ</div>
+          <h1>Murathan Arslan</h1>
+          <h2>GAYRİMENKUL DANIŞMANI</h2>
+
+          <p>
+            Kurtköy ve Yenişehir bölgesinde gayrimenkul alım-satım süreçlerinde
+            güven, şeffaflık ve doğru yönlendirme odaklı hizmet.
+          </p>
+
+          <div class="actions">
+            <a href="tel:+905322545592" class="btn gold">☎ Beni Arayın</a>
+            <a href="https://wa.me/905322545592" target="_blank" class="btn navy">☏ WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-card">
+      <div class="quick-item" data-scroll="#sekmeler">
+        <h3>İlanlar</h3>
+        <p>Güncel ilanlara göz atın</p>
+      </div>
+
+      <div class="quick-item" data-scroll="#sekmeler">
+        <h3>İletişim</h3>
+        <p>Benimle iletişime geçin</p>
+      </div>
+
+      <div class="quick-item" data-scroll="#sekmeler">
+        <h3>Galeri</h3>
+        <p>Fotoğraf galerime göz atın</p>
+      </div>
+    </section>
+
+    <section class="section about-grid">
+      <div>
+        <div class="label">Hakkımda</div>
+        <h2>Kısa Bir Hakkımda</h2>
+
+        <p>
+          Merhaba, ben Murathan Arslan. 1978 yılı Sakarya doğumluyum.
+          2010 yılından itibaren Pendik/Kurtköy’de ikamet etmekteyim.
+        </p>
+
+        <p>
+          1997 yılında eğitimimi tamamladıktan sonra profesyonel iş hayatına atıldım.
+          2024 yılı sonuna kadar otomotiv yan sanayii, beyaz eşya yan sanayii ve
+          CNC-kayar otomat üretimi yapan firmalarda malzeme planlama ve üretim
+          planlama departmanlarında yöneticilik yaptım.
+        </p>
+
+        <p>
+          2025 yılından itibaren gayrimenkul sektörüne geçiş yaparak MasterTürk
+          BlueStart eğitimi ve CB Kobi Zirve Yolculuğu Programı eğitimlerini aldım.
+        </p>
+      </div>
+
+      <div>
+        <img src="assets/images/mtrhanarslan.png" alt="İstanbul Gayrimenkul" class="about-photo" />
+      </div>
+    </section>
+
+    <section class="section" id="sekmeler">
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="ilanlar">İlanlar</button>
+        <button class="tab-btn" data-tab="iletisim">İletişim</button>
+        <button class="tab-btn" data-tab="galeri">Galeri</button>
+      </div>
+
+      <div id="ilanlar" class="tab-panel active">
+        <h2>Güncel İlanlar</h2>
+        <p>
+          Güncel portföy ve ilan bağlantıları yakında burada yayınlanacaktır.
+        </p>
+
+        <div class="cards">
+          <div class="card">
+            <h3>İlan Linki</h3>
+            <p>Sahibinden, Hepsiemlak veya diğer ilan bağlantıları burada kart şeklinde gösterilecek.</p>
+          </div>
+
+          <div class="card">
+            <h3>Yatırım Fırsatları</h3>
+            <p>Kurtköy ve Yenişehir bölgesindeki fırsatlar için iletişime geçebilirsiniz.</p>
+          </div>
+
+          <div class="card">
+            <h3>Danışmanlık</h3>
+            <p>Alım-satım sürecinde doğru fiyat, doğru bölge ve güvenilir süreç desteği.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="iletisim" class="tab-panel">
+        <h2>İletişim</h2>
+
+        <p>
+          Gayrimenkul danışmanlığı, portföy değerlendirme ve detaylı bilgi için
+          benimle doğrudan iletişime geçebilirsiniz.
+        </p>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Telefon</h3>
+            <p><a href="tel:+905322545592">+90 532 254 55 92</a></p>
+          </div>
+
+          <div class="card">
+            <h3>WhatsApp</h3>
+            <p><a href="https://wa.me/905322545592" target="_blank">WhatsApp’dan ulaşın</a></p>
+          </div>
+
+          <div class="card">
+            <h3>E-posta</h3>
+            <p><a href="mailto:murathan.arslan@gmail.com">murathan.arslan@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div id="galeri" class="tab-panel">
+        <h2>Galeri</h2>
+
+        <p>
+          Eğitimler, sertifikalar ve profesyonel paylaşımlar yakında bu alanda yer alacaktır.
+        </p>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Sertifikalar</h3>
+            <p>Alınan eğitim ve sertifika görselleri burada paylaşılacak.</p>
+          </div>
+
+          <div class="card">
+            <h3>Etkinlikler</h3>
+            <p>Katıldığı eğitim ve sektörel etkinliklerden kareler burada yer alacak.</p>
+          </div>
+
+          <div class="card">
+            <h3>Paylaşımlar</h3>
+            <p>Gayrimenkul sektörüyle ilgili güncel paylaşımlar burada gösterilecek.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="label">Güncel Paylaşımlar</div>
+      <h2>Blog ve Duyurular</h2>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Kurtköy’de Gayrimenkul Değeri</h3>
+          <p>
+            Bölgedeki gelişmeler, ulaşım avantajları ve yatırım potansiyeli üzerine kısa notlar.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Doğru Gayrimenkul Seçimi</h3>
+          <p>
+            Gayrimenkul alırken dikkat edilmesi gereken temel noktalar ve danışmanlık süreci.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Yenişehir Bölgesi</h3>
+          <p>
+            Yenişehir ve çevresindeki konut, ticari alan ve yatırım fırsatlarına genel bakış.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Murathan Arslan</p>
+    <p>
+      <a href="tel:+905322545592">Beni Arayın</a> ·
+      <a href="https://wa.me/905322545592" target="_blank">WhatsApp</a> ·
+      <a href="mailto:murathan.arslan@gmail.com">E-posta</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
