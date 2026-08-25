@@ -1,7 +1,17 @@
 const header = document.querySelector("[data-header]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const navLinks = document.querySelector("[data-nav-links]");
+const navGroups = document.querySelectorAll("[data-nav-group]");
 const mobileBreakpoint = window.matchMedia("(max-width: 860px)");
+
+const closeNavGroups = ({ returnFocus = false } = {}) => {
+  navGroups.forEach((group) => {
+    if (!group.open) return;
+
+    group.open = false;
+    if (returnFocus) group.querySelector("summary")?.focus();
+  });
+};
 
 const closeMenu = ({ returnFocus = false } = {}) => {
   if (!header || !navToggle) return;
@@ -10,6 +20,7 @@ const closeMenu = ({ returnFocus = false } = {}) => {
   navToggle.setAttribute("aria-expanded", "false");
   navToggle.setAttribute("aria-label", "Menüyü aç");
   document.body.classList.remove("menu-open");
+  closeNavGroups();
 
   if (returnFocus) navToggle.focus();
 };
@@ -36,6 +47,8 @@ if (header && navToggle && navLinks) {
   });
 
   document.addEventListener("click", (event) => {
+    if (!event.target.closest("[data-nav-group]")) closeNavGroups();
+
     if (
       mobileBreakpoint.matches &&
       navToggle.getAttribute("aria-expanded") === "true" &&
@@ -46,10 +59,12 @@ if (header && navToggle && navLinks) {
   });
 
   document.addEventListener("keydown", (event) => {
-    if (
-      event.key === "Escape" &&
-      navToggle.getAttribute("aria-expanded") === "true"
-    ) {
+    if (event.key !== "Escape") return;
+
+    const hasOpenGroup = Array.from(navGroups).some((group) => group.open);
+    if (hasOpenGroup) closeNavGroups({ returnFocus: true });
+
+    if (navToggle.getAttribute("aria-expanded") === "true") {
       closeMenu({ returnFocus: true });
     }
   });
@@ -64,6 +79,16 @@ if (header && navToggle && navLinks) {
     mobileBreakpoint.addListener(handleBreakpointChange);
   }
 }
+
+navGroups.forEach((group) => {
+  group.addEventListener("toggle", () => {
+    if (!group.open) return;
+
+    navGroups.forEach((otherGroup) => {
+      if (otherGroup !== group) otherGroup.open = false;
+    });
+  });
+});
 
 if (header) {
   const updateHeader = () => {
