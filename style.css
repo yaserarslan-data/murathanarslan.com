@@ -2949,6 +2949,21 @@ p {
   }
 }
 
+@media (min-width: 861px) and (max-width: 1160px) {
+  .nav {
+    gap: 20px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links > a:not(.nav-call),
+  .nav-group {
+    font-size: 0.85rem;
+  }
+}
+
 @media (max-width: 860px) {
   .nav-call {
     display: grid;
